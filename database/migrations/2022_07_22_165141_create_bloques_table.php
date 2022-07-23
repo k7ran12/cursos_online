@@ -17,7 +17,6 @@ class CreateBloquesTable extends Migration
         Schema::create('bloques', function (Blueprint $table) {
             $table->id();
             $table->string('nombre_bloque');
-            $table->string('carpeta')->nullable();
             $table->foreignIdFor(Curso::class);
             $table->timestamps();
         });

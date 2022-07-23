@@ -17,7 +17,7 @@ class CursoController extends Controller
      */
     public function index()
     {
-        $cursos = Curso::all();
+        $cursos = Curso::with('categoria')->paginate(10);
         return view('curso.index', compact('cursos'));
     }
 
@@ -45,7 +45,8 @@ class CursoController extends Controller
             'nombre_cursos' => $request->nombre_cursos,
             'nombre_instructor' => $request->nombre_instructor,
             'carpeta' => $carpeta,
-            'categoria_id' => $request->categoria_id
+            'categoria_id' => $request->categoria_id,
+            'imagen'=> $request->imagen
         ]);
 
         if($curso){

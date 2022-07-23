@@ -6,15 +6,19 @@
             <form method="POST" action="{{ route('curso.store') }}">
                 @csrf
                 <div class="form-group">
-                    <label for="nombre">Nombre Curso</label>
+                    <label for="nombre_cursos">Nombre Curso</label>
                     <input type="text" class="form-control" name="nombre_cursos" id="nombre_cursos" placeholder="Nombre Cursos" required>
                 </div>
                 <div class="form-group">
-                    <label for="nombre">Nombre Instructor</label>
+                    <label for="nombre_instructor">Nombre Instructor</label>
                     <input type="text" class="form-control" name="nombre_instructor" id="nombre_instructor" placeholder="Nombre Instructor" required>
                 </div>
                 <div class="form-group">
-                    <label for="nombre">Categoria</label>
+                    <label for="imagen">Imagen Curso</label>
+                    <input type="text" class="form-control" name="imagen" id="imagen" placeholder="Nombre Instructor" required>
+                </div>
+                <div class="form-group">
+                    <label for="categoria_id">Categoria</label>
                     <input type="text" class="form-control" name="categoria_id" id="categoria_id" placeholder="Categoria" required>
                 </div>
 

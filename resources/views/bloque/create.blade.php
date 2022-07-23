@@ -10,10 +10,6 @@
                     <label for="nombre_bloque">Nombre Bloque</label>
                     <input type="text" class="form-control" name="nombre_bloque" id="nombre_bloque" placeholder="Nombre Categoria" required>
                 </div>
-                <div class="form-group">
-                    <label for="carpeta">Carpeta</label>
-                    <input type="text" class="form-control" name="carpeta" id="carpeta" placeholder="Nombre Categoria" required>
-                </div>
                 <button class="btn btn-primary mt-2">Guardar</button>
             </form>
         </div>

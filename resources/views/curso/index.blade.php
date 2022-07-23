@@ -16,6 +16,7 @@
                 <th>Nombre Cursos</th>
                 <th>Nombre Instructor</th>
                 <th>Carpeta</th>
+                <th>Imagen Curso</th>
                 <th>Categoria</th>
                 <th>Administrar</th>
             </tr>
@@ -27,12 +28,14 @@
                 <td>{{ $curso->nombre_cursos }}</td>
                 <td>{{ $curso->nombre_instructor }}</td>
                 <td>{{ $curso->carpeta }}</td>
-                <td>{{ $curso->categoria_id }}</td>
+                <td>{{ $curso->imagen }}</td>
+                <td>{{ $curso->categoria->nombre }}</td>
                 <td><a href="{{ route('bloque.index', $curso->id) }}" class="btn btn-success"><i></i>Administrar curso</a></td>
             </tr>
             @endforeach
         </tbody>
     </table>
+    {{ $cursos->links() }}
 
 
 </div>

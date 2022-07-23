@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Curso extends Model
 {
     use HasFactory;
-    protected $fillable = ['nombre_cursos', 'nombre_instructor', 'carpeta', 'categoria_id'];
+    protected $fillable = ['nombre_cursos', 'nombre_instructor', 'carpeta', 'categoria_id','imagen'];
 
     public function categoria()
     {

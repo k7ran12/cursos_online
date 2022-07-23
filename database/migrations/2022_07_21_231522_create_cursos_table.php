@@ -18,6 +18,7 @@ class CreateCursosTable extends Migration
             $table->id();
             $table->string('nombre_cursos');
             $table->string('nombre_instructor');
+            $table->string('imagen')->nullable();
             $table->string('carpeta');
             $table->foreignIdFor(Categoria::class);
             $table->timestamps();

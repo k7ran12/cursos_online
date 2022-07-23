@@ -9,7 +9,7 @@ class Bloque extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['nombre_bloque', 'carpeta', 'curso_id'];
+    protected $fillable = ['nombre_bloque', 'curso_id'];
 
     public function videos()
     {
