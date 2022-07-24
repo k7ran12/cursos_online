@@ -9,6 +9,10 @@ use Illuminate\Support\Facades\Storage;
 
 class BloqueController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware(['role:admin','permission:curso']);
+    }
     public function index($id)
     {
         $curso_bloque = Bloque::where('curso_id', $id)->get();

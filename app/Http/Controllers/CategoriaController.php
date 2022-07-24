@@ -7,11 +7,10 @@ use Illuminate\Http\Request;
 
 class CategoriaController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    public function __construct()
+    {
+        $this->middleware(['role:admin','permission:curso']);
+    }
     public function index()
     {
         $categorias = Categoria::all();

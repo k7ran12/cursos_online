@@ -10,11 +10,10 @@ use Illuminate\Support\Facades\Storage;
 
 class VideoController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    public function __construct()
+    {
+        $this->middleware(['role:admin','permission:curso']);
+    }
     public function index($bloque_id)
     {
         $videos = Bloque::with('videos');

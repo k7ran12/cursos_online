@@ -10,11 +10,10 @@ use Illuminate\Support\Facades\Storage;
 
 class CursoController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    public function __construct()
+    {
+        $this->middleware(['role:admin','permission:curso']);
+    }
     public function index()
     {
         $cursos = Curso::with('categoria')->paginate(10);
